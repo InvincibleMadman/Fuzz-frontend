@@ -22,7 +22,8 @@ export function Sidebar({
       <div className="sidebar-top">
         <div className="brand-block">
           <div className="brand-mark">Φ</div>
-          <div>
+
+          <div className="brand-copy">
             <div className="eyebrow">Fuzzing System</div>
             <h1>Light Console</h1>
           </div>
@@ -39,26 +40,28 @@ export function Sidebar({
         </button>
       </div>
 
-      <nav className="nav-list">
-        {navRoutes.map(({ path, label, icon: Icon }) => (
-          <NavLink
-            key={path}
-            to={path}
-            end={path === '/'}
-            className={({ isActive }) =>
-              `nav-item ${isActive ? 'active' : ''} ${collapsed ? 'is-icon-only' : ''}`
-            }
-            title={collapsed ? label : undefined}
-          >
-            <span className="nav-item__active-rail" />
-            <span className="nav-item__icon">
-              <Icon size={20} />
-            </span>
-            <span className="nav-item__label">{label}</span>
-            {!collapsed && <ChevronRight size={16} className="nav-arrow" />}
-          </NavLink>
-        ))}
-      </nav>
+      <div className="sidebar-nav-shell">
+        <nav className="nav-list">
+          {navRoutes.map(({ path, label, icon: Icon }) => (
+            <NavLink
+              key={path}
+              to={path}
+              end={path === '/'}
+              className={({ isActive }) =>
+                `nav-item ${isActive ? 'active' : ''} ${collapsed ? 'is-icon-only' : ''}`
+              }
+              title={collapsed ? label : undefined}
+            >
+              <span className="nav-item__active-rail" />
+              <span className="nav-item__icon">
+                <Icon size={20} />
+              </span>
+              <span className="nav-item__label">{label}</span>
+              {!collapsed && <ChevronRight size={16} className="nav-arrow" />}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
 
       {!collapsed && (
         <div className="sidebar-footer card-soft system-panel">
