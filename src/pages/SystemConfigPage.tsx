@@ -90,10 +90,6 @@ export function SystemConfigPage() {
               />
             </Field>
 
-            <div className="config-inline-hint">
-              当前版本仅做前端展示与交互。按钮点击后统一返回成功提示，不会请求后端，也不会保存结果。
-            </div>
-
             <div className="action-row">
               <ActionButton icon={Save} onClick={handleFakeSave}>
                 保存接入配置
@@ -154,15 +150,6 @@ export function SystemConfigPage() {
                 <input value={form.model} readOnly />
               </Field>
             </div>
-
-            <Field label="系统提示词">
-              <textarea
-                rows={5}
-                value={form.systemPrompt}
-                onChange={(e) => updateField('systemPrompt', e.target.value)}
-                placeholder="输入模型默认系统提示词"
-              />
-            </Field>
 
             <div className="action-row">
               <ActionButton icon={Save} onClick={handleFakeSave}>
