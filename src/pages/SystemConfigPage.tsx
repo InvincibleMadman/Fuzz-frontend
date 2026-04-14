@@ -16,7 +16,6 @@ type SystemConfigForm = {
   temperature: number;
   maxTokens: number;
   timeoutSeconds: number;
-  systemPrompt: string;
 };
 
 const DEFAULT_CONFIG: SystemConfigForm = {
@@ -27,7 +26,6 @@ const DEFAULT_CONFIG: SystemConfigForm = {
   temperature: 0.2,
   maxTokens: 4096,
   timeoutSeconds: 60,
-  systemPrompt: '你是一个工业控制协议模糊测试助手，请优先输出结构化、工程化、可直接落地的结果。',
 };
 
 const MODEL_OPTIONS: Array<{ value: ModelValue; title: string; hint: string }> = [
@@ -56,7 +54,7 @@ export function SystemConfigPage() {
   return (
     <PageFrame
       title="系统配置"
-      description="配置 LLM 模型、API Key、Base URL 与默认请求参数。当前版本仅提供前端交互，不接入后端接口。"
+      description="配置 LLM 模型、API Key、Base URL 与默认请求参数"
       icon={Settings2}
     >
       <div className="page-grid system-config-grid">
