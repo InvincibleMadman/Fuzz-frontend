@@ -72,7 +72,7 @@ export function SeedPage() {
           <TagList items={uploadedVuldoc} emptyText="尚未上传漏洞文档" />
         </Panel>
 
-        <Panel title="生成参数" icon={WandSparkles}>
+        <Panel title="生成参数" icon={WandSparkles} scrollable>
           <div className="form-grid one-col compact-stack">
             <Field label="iterations">
               <input type="number" value={form.iterations} onChange={(e) => setForm((s) => ({ ...s, iterations: Number(e.target.value) }))} />

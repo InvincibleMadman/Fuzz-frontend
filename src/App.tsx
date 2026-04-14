@@ -10,6 +10,7 @@ import { OverviewPage } from './pages/OverviewPage';
 import { ProtocolPage } from './pages/ProtocolPage';
 import { RiskPage } from './pages/RiskPage';
 import { SeedPage } from './pages/SeedPage';
+import { SystemConfigPage } from './pages/SystemConfigPage';
 
 const pageMotion = {
   initial: { opacity: 0, y: 8 },
@@ -46,6 +47,7 @@ function AppLayout() {
                 <Route path="/seed" element={<SeedPage />} />
                 <Route path="/risk" element={<RiskPage />} />
                 <Route path="/fuzz" element={<FuzzPage />} />
+                <Route path="/settings" element={<SystemConfigPage />} />
               </Routes>
             </motion.div>
           </AnimatePresence>

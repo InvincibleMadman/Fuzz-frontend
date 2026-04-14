@@ -21,7 +21,7 @@ export function Panel({
           <span>{title}</span>
         </div>
       </div>
-      <div className={`panel-body ${scrollable ? 'scroll-area' : ''}`}>{children}</div>
+      <div className={`panel-body${scrollable ? ' scroll-area' : ''}`}>{children}</div>
     </motion.section>
   );
 }

@@ -1,4 +1,4 @@
-import { Binary, FlaskConical, LayoutDashboard, Orbit, ShieldAlert } from 'lucide-react';
+import { Binary, FlaskConical, LayoutDashboard, Orbit, Settings2, ShieldAlert } from 'lucide-react';
 import type { NavRoute } from '../types';
 
 export const navRoutes: NavRoute[] = [
@@ -7,4 +7,5 @@ export const navRoutes: NavRoute[] = [
   { path: '/seed', label: '种子工坊', icon: Binary },
   { path: '/risk', label: '风险分析', icon: ShieldAlert },
   { path: '/fuzz', label: '模糊测试', icon: FlaskConical },
+  { path: '/settings', label: '系统配置', icon: Settings2 },
 ];
